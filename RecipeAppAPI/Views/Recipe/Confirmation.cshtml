@@ -1,0 +1,19 @@
+﻿
+@model RecipeAppAPI.Models.Recipe
+
+<div class="text-background">
+    <h2>Your recipe has been added!</h2><br>
+
+    <table class="table table-bordered table-responsive">
+        <tr>
+            <th>@Model.RecipeName</th>
+            <th>@Model.Rating</th>
+            <th>@Model.Hours</th>
+            <th>@Model.Minutes</th>
+            <th>@Model.Instructions</th>
+        </tr>
+    </table>
+    <div>
+        @Html.ActionLink("Back to Home", "Index")
+    </div>
+</div>

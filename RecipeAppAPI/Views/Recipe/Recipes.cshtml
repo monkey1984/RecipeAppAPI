@@ -1,0 +1,28 @@
+﻿
+@model IEnumerable<RecipeAppAPI.Models.Recipe>
+
+<div class="text-background">
+    <h2 id="welcome">Recipes</h2>
+
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr id="text-header">
+                <th>ID</th>
+                <th>Recipe Name</th>
+                <th>Rating</th>
+                <th>Time</th>
+                <th>Instructions</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.RecipeID</th>
+                <th>@item.RecipeName</th>
+                <th>@item.Rating</th>
+                <th>@item.Hours : @item.Minutes</th>
+                <th>@item.Instructions</th>
+            </tr>
+        }
+    </table>
+</div>
